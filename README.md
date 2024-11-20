@@ -18,18 +18,20 @@ Prerequisites
 
 Installation
 ------------------------------------------------------------
-1. Extract the ZIP File
+1. Open your terminal (or Git Bash) and run the following command to clone the repository:
 
-Windows: Right-click on the ZIP file and select Extract All, then choose the destination folder.
+git clone https://github.com/sangam007007/ecommerce.git
 
-2. Install Project Dependencies
+2. After the clone command finishes, navigate into the project directory:
 
-Open the terminal (or Command Prompt/PowerShell in Windows) and navigate to the project folder (the folder where package.json is located).
+cd ecommerce
+
 
 3. Run the following command to install the required dependencies
 
 npm install
-4. Set Up the Environment Variables
+
+4. Set Up the Environment Variables(Already there)
 In the project root directory, create a .env file with the following settings:
 JWT_SECRET=your_secret_key
 
@@ -38,7 +40,7 @@ Replace your_secret_key with a strong, random string for JWT authentication.
 
 5.Start the server:
 
-node server.js 
+====> node server.js 
 
 Open http://localhost:3000 in your browser or API client.
 
@@ -110,12 +112,15 @@ Payload:
   "filterValue": null
 
 }
-  7. All prodect based on the filter condition
-  ----------------------------------------------------------------
-    1. Purpose: Retrieve product statistics filtered by Campaign Name. Additional filters like Ad Group ID, FSN ID, or Product Name can also be applied to further refine the results.
+
+ 7. All prodect based on the filter condition
+
+    API 1- Purpose: Retrieve product statistics filtered by Campaign Name. Additional filters like Ad Group ID, FSN ID, or Product Name can also be applied to further refine the results.
     
     Endpoint: POST http://localhost:3000/products/report/campaign
+
     ![alt text](image-6.png)
+
     Payload:
     {
         "filters": {
@@ -124,7 +129,7 @@ Payload:
          "page": 1,
          "limit": 10
         }
-     2. Purpose: Retrieve product statistics filtered by Ad Group ID. Additional filters like Campaign Name, FSN ID, or Product Name can be applied
+     API 2-  Purpose: Retrieve product statistics filtered by Ad Group ID. Additional filters like Campaign Name, FSN ID, or Product Name can be applied
     
         Endpoint:POST http://localhost:3000/products/report/adGroupID
 
@@ -139,10 +144,11 @@ Payload:
         "page": 1,
         "limit": 10
         }
-   3. Purpose:  Retrieve product statistics filtered by FSN ID. Additional filters like Campaign Name, Ad Group ID, or Product Name can also be applied.
+   3. API 3- Purpose:  Retrieve product statistics filtered by FSN ID. Additional filters like Campaign Name, Ad Group ID, or Product Name can also be applied.
 
     
     Endpoint:POST http://localhost:3000/products/report/fsnID
+
     ![alt text](image-9.png)
 
     Payload:
@@ -156,7 +162,7 @@ Payload:
   "limit": 10
 }
 
- 4. Purpose:  Retrieve product statistics filtered by Product Name. Additional filters like Campaign Name, Ad Group ID, or FSN ID can also be applied.
+ 4. API 4- Purpose:  Retrieve product statistics filtered by Product Name. Additional filters like Campaign Name, Ad Group ID, or FSN ID can also be applied.
 
    Endpoint:POST http://localhost:3000/products/report/productName
 
